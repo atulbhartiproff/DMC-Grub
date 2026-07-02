@@ -13,7 +13,7 @@ GRUB_DIR="/usr/share/grub/themes"
 REO_DIR="$(cd $(dirname $0) && pwd)"
 
 SCREEN_VARIANTS=('1080p' '2k' '4k')
-THEME_VARIANTS=('changli' 'jinxi' 'jiyan' 'yinlin' 'anke' 'weilinai' 'kakaluo' 'jianxin')
+THEME_VARIANTS=('changli' 'jinxi' 'jiyan' 'yinlin' 'anke' 'weilinai' 'kakaluo' 'jianxin' 'v' 'dante' 'nero' 'vergil')
 
 screens=()
 themes=()
@@ -65,7 +65,7 @@ cat << EOF
 Usage: $0 [OPTION]...
 
 OPTIONS:
-  -t, --theme     Background theme variant(s) [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin] (default is changli)
+  -t, --theme     Background theme variant(s) [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|v|dante|nero|vergil] (default is changli)
   -s, --screen    Screen display variant(s)   [1080p|2k|4k] (default is 1080p)
   -r, --remove    Remove/Uninstall theme      [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin] (must add theme name option, default is changli)
   -b, --boot      Install theme into '/boot/grub' or '/boot/grub2'
@@ -266,7 +266,10 @@ run_dialog() {
       5 "Anke Theme" off \
       6 "Weilinai Theme" off  \
       7 "Kakaluo Theme" off  \
-      8 "Jianxin Theme" off --output-fd 1 )
+      9 "V Theme" off \
+      10 "Dante Theme" off \
+      11 "Nero Theme" off \
+      12 "Vergil Theme" off --output-fd 1 )
       case "$tui" in
         1) theme="changli"    ;;
         2) theme="jinxi"      ;;
@@ -276,6 +279,10 @@ run_dialog() {
         6) theme="weilinai"   ;;
         7) theme="kakaluo"    ;;
         8) theme="jianxin"    ;;
+        9) theme="v"    ;;
+        10) theme="dante"    ;;
+        11) theme="nero"    ;;
+        12) theme="vergil"    ;;
         *) operation_canceled ;;
      esac
 
@@ -503,6 +510,22 @@ while [[ $# -gt 0 ]]; do
             ;;
           jianxin)
             themes+=("${THEME_VARIANTS[7]}")
+            shift
+            ;;
+          v)
+            themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
+          dante)
+            themes+=("${THEME_VARIANTS[9]}")
+            shift
+            ;;
+          nero)
+            themes+=("${THEME_VARIANTS[10]}")
+            shift
+            ;;
+          vergil)
+            themes+=("${THEME_VARIANTS[11]}")
             shift
             ;;
           -*)
