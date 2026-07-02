@@ -1,4 +1,4 @@
-![banner](banner.png?raw=true)
+![DantePreview](DantePreview?raw=true)
 
 ## Installation:
 
