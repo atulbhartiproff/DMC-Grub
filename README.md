@@ -1,4 +1,4 @@
-![DantePreview](DantePreview?raw=true)
+![DantePreview](DantePreview.jpg?raw=true)
 
 ## Installation:
 
