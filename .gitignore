@@ -1,4 +1,5 @@
 backgrounds/background.svg
 backgrounds/render-backgrounds.sh
 release/*.xz
-assets/icons
+assets/assets-icons
+assets/assets-other
