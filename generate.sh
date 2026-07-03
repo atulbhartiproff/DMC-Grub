@@ -84,7 +84,7 @@ generate() {
   mkdir -p "${THEME_DIR}"
 
   # Copy theme
-  prompt -i "\n Installing Wuthering-${theme} ${screen} theme ..."
+  prompt -i "\n Installing DMC-${theme} ${screen} theme ..."
 
   # Don't preserve ownership because the owner will be root, and that causes the script to crash if it is ran from terminal by sudo
   cp -a --no-preserve=ownership "${REO_DIR}/common/"*.pf2 "${THEME_DIR}"

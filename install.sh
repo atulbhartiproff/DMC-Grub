@@ -89,7 +89,7 @@ install() {
     mkdir -p "${THEME_DIR}"
 
     # Copy theme
-    prompt -i "\n Installing Wuthering-${theme} ${screen} ..."
+    prompt -i "\n Installing DMC-${theme} ${screen} ..."
 
     # Don't preserve ownership because the owner will be root, and that causes the script to crash if it is ran from terminal by sudo
     cp -a --no-preserve=ownership "${REO_DIR}/common/"*.pf2 "${THEME_DIR}"
@@ -106,7 +106,7 @@ install() {
     fi
 
     # Set theme
-    prompt -i "\n Setting Wuthering as default..."
+    prompt -i "\n Setting DMC as default..."
 
     # Backup grub config
     if [[ -f /etc/default/grub.bak ]]; then
@@ -190,7 +190,7 @@ install() {
     # Update grub config
     prompt -i "\n Updating grub config... \n"
     updating_grub
-    prompt -w "\n * At the next restart of your computer you will see your new Grub theme: 'Wuthering-${theme}' \n"
+    prompt -w "\n * At the next restart of your computer you will see your new Grub theme: 'DMC-${theme}' \n"
 
   #Check if password is cached (if cache timestamp has not expired yet)
   elif sudo -n true 2> /dev/null && echo; then
