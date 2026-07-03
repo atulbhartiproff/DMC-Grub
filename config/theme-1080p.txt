@@ -19,7 +19,7 @@ terminal-border: "0"
   top = 30%
   width = 40%
   height = 40%
-  item_font = "Unifont Regular 16"
+  item_font = "Cinzel Regular 16"
   item_color = "#9e8058"
   selected_item_color = "#b59161"
   icon_width = 32
