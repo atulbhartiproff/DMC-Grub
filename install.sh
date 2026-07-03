@@ -13,7 +13,7 @@ GRUB_DIR="/usr/share/grub/themes"
 REO_DIR="$(cd $(dirname $0) && pwd)"
 
 SCREEN_VARIANTS=('1080p' '2k' '4k')
-THEME_VARIANTS=('changli' 'jinxi' 'jiyan' 'yinlin' 'anke' 'weilinai' 'kakaluo' 'jianxin' 'v' 'dante' 'nero' 'vergil')
+THEME_VARIANTS=('v' 'dante' 'nero' 'vergil')
 
 screens=()
 themes=()
@@ -259,30 +259,15 @@ run_dialog() {
 
     tui=$(dialog --backtitle ${Project_Name} \
     --radiolist "Choose your Grub theme background picture : " 15 40 5 \
-      1 "Changli Theme" on  \
-      2 "Jinxi Theme" off \
-      3 "Jiyan Theme" off  \
-      4 "Yinlin Theme" off  \
-      5 "Anke Theme" off \
-      6 "Weilinai Theme" off  \
-      7 "Kakaluo Theme" off  \
-      9 "V Theme" off \
-      10 "Dante Theme" off \
-      11 "Nero Theme" off \
-      12 "Vergil Theme" off --output-fd 1 )
+      1 "V Theme" off \
+      2 "Dante Theme" off \
+      3 "Nero Theme" off \
+      4 "Vergil Theme" off --output-fd 1 )
       case "$tui" in
-        1) theme="changli"    ;;
-        2) theme="jinxi"      ;;
-        3) theme="jiyan"      ;;
-        4) theme="yinlin"     ;;
-        5) theme="anke"       ;;
-        6) theme="weilinai"   ;;
-        7) theme="kakaluo"    ;;
-        8) theme="jianxin"    ;;
-        9) theme="v"    ;;
-        10) theme="dante"    ;;
-        11) theme="nero"    ;;
-        12) theme="vergil"    ;;
+        1) theme="v"    ;;
+        2) theme="dante"    ;;
+        3) theme="nero"    ;;
+        4) theme="vergil"    ;;
         *) operation_canceled ;;
      esac
 
@@ -480,52 +465,20 @@ while [[ $# -gt 0 ]]; do
       shift
       for theme in "${@}"; do
         case "${theme}" in
-          changli)
+          v)
             themes+=("${THEME_VARIANTS[0]}")
             shift
             ;;
-          jinxi)
+          dante)
             themes+=("${THEME_VARIANTS[1]}")
             shift
             ;;
-          jiyan)
+          nero)
             themes+=("${THEME_VARIANTS[2]}")
             shift
             ;;
-          yinlin)
-            themes+=("${THEME_VARIANTS[3]}")
-            shift
-            ;;
-          anke)
-            themes+=("${THEME_VARIANTS[4]}")
-            shift
-            ;;
-          weilinai)
-            themes+=("${THEME_VARIANTS[5]}")
-            shift
-            ;;
-          kakaluo)
-            themes+=("${THEME_VARIANTS[6]}")
-            shift
-            ;;
-          jianxin)
-            themes+=("${THEME_VARIANTS[7]}")
-            shift
-            ;;
-          v)
-            themes+=("${THEME_VARIANTS[8]}")
-            shift
-            ;;
-          dante)
-            themes+=("${THEME_VARIANTS[9]}")
-            shift
-            ;;
-          nero)
-            themes+=("${THEME_VARIANTS[10]}")
-            shift
-            ;;
           vergil)
-            themes+=("${THEME_VARIANTS[11]}")
+            themes+=("${THEME_VARIANTS[3]}")
             shift
             ;;
           -*)
