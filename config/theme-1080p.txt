@@ -15,13 +15,13 @@ terminal-border: "0"
 
 # Show the boot menu
 + boot_menu {
-  left = 8%
-  top = 30%
+  left = 4%
+  top = 40%
   width = 40%
-  height = 40%
+  height = 50%
   item_font = "Cinzel Regular 16"
-  item_color = "#9e8058"
-  selected_item_color = "#b59161"
+  item_color = "#1e44eb"
+  selected_item_color = "#991423"
   icon_width = 32
   icon_height = 32
   item_icon_space = 20
@@ -33,7 +33,7 @@ terminal-border: "0"
 
 + image {
   top = 6%
-  left = 20%
+  left = 10%
   width = 292
   height = 196
   file = "logo.png"
@@ -54,7 +54,7 @@ terminal-border: "0"
   width = 36%
   align = "center"
   id = "__timeout__"
-  text = "Booting in %d seconds"
+  text = "Judgment cut in %d"
   color = "#b59161"
-  font = "Unifont Regular 16"
+  font = "Cinzel Regular 16"
 }
